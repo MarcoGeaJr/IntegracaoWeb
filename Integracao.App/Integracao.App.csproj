@@ -13,11 +13,12 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Configuration\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Integracao.Business\Integracao.Business.csproj" />
-	  <ProjectReference Include="..\Integracao.Business\Integracao.Data.csproj" />
+	 <ProjectReference Include="..\Integracao.Data\Integracao.Data.csproj" />
   </ItemGroup>
 
 </Project>

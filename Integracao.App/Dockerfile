@@ -10,6 +10,7 @@ WORKDIR /src
 COPY ["Integracao.App/Integracao.App.csproj", "Integracao.App/"]
 COPY ["Integracao.Business/Integracao.Business.csproj", "Integracao.Business/"]
 COPY ["Integracao.Data/Integracao.Data.csproj", "Integracao.Data/"]
+COPY ["Integracao.Shared/Integracao.Shared.csproj", "Integracao.Shared/"]
 RUN dotnet restore "Integracao.App/Integracao.App.csproj"
 COPY . .
 WORKDIR "/src/Integracao.App"
