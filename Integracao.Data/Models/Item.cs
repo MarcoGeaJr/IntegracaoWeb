@@ -1,12 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Integracao.Data.Models
 {
     [Table("ItensPedido")]
-    public class Item
+    public class Item : Entity
     {
-        public Guid Id { get; set; }
         public Produto Produto { get; set; }
         public int Quantidade { get; set; }
     }

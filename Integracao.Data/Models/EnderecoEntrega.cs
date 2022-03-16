@@ -1,12 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Integracao.Data.Models
 {
     [Table("EnderecoEntrega")]
-    public class EnderecoEntrega
+    public class EnderecoEntrega : Entity
     {
-        public Guid Id { get; set; }
         public string Endereco { get; set; }
         public string Numero { get; set; }
         public string Cep { get; set; }
