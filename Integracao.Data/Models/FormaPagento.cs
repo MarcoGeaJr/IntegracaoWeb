@@ -3,9 +3,15 @@
 namespace Integracao.Data.Models
 {
     [Table("FormasPagemento")]
-    public class FormaPagamento
+    public class FormaPagamento : Entity
     {
-        public string Id { get; set; }
-        public string Nome { get; set; }
+        public FormaPagamento(string codigo, string nome)
+        {
+            Codigo = codigo;
+            Nome = nome;
+        }
+
+        public string Codigo { get; private set; }
+        public string Nome { get; private set; }
     }
 }

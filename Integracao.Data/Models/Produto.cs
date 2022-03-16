@@ -4,10 +4,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Integracao.Data.Models
 {
     [Table("Produtos")]
-    public class Produto
+    public class Produto : Entity
     {
-        public Guid IdProduto { get; set; }
-        public string Nome { get; set; }
-        public double Valor { get; set; }
+        public Produto(string nome, double valor)
+        {
+            Nome = nome;
+            Valor = valor;
+        }
+
+        public string Nome { get; private set; }
+        public double Valor { get; private set; }
+
+        public void UpdateNome(string nome)
+            => Nome = nome;
     }
 }
