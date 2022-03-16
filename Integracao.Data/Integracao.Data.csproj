@@ -6,11 +6,10 @@
 
   <ItemGroup>
     <Folder Include="Context\" />
-    <Folder Include="Models\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Mappings\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Repository\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
