@@ -10,8 +10,8 @@ namespace Integracao.Data.Repositories
 {
     public class RepositoryFind<TEntity> : IRepositoryFind<TEntity> where TEntity : Entity
     {
-        private readonly DbSet<TEntity> _DbSet;
-        private readonly IntegracaoDataContext _context;
+        protected readonly DbSet<TEntity> _DbSet;
+        protected readonly IntegracaoDataContext _context;
 
         public RepositoryFind(IntegracaoDataContext context)
         {
