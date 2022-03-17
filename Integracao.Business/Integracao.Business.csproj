@@ -10,9 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Configuration\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Validation\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>

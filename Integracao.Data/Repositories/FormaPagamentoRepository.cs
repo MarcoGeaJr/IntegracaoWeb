@@ -5,11 +5,12 @@ using System.Linq;
 
 namespace Integracao.Data.Repositories
 {
-    public class FormaPagamentoRepository : RepositoryFind<FormaPagamento>, IFormaPagamentoRepository
+    public class FormaPagamentoRepository : IFormaPagamentoRepository
     {
+        private readonly IntegracaoDataContext _context;
         public FormaPagamentoRepository(IntegracaoDataContext context)
-            : base(context) { }
-        public bool ValidarCodigoExistente(string codigo)
-            => _DbSet.Any(x => x.Codigo == codigo);
+        {
+            _context = context;
+        }
     }
 }

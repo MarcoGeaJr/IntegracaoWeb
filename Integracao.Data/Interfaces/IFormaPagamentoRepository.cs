@@ -2,7 +2,7 @@
 
 namespace Integracao.Data.Interfaces
 {
-    public interface IFormaPagamentoRepository : IRepositoryFind<FormaPagamento>
+    public interface IFormaPagamentoRepository : IRepository<FormaPagamento>
     {
         bool ValidarCodigoExistente(string codigo);
     }
