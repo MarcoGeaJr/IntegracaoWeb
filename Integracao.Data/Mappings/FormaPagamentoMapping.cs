@@ -15,6 +15,7 @@ namespace Integracao.Data.Mappings
             // Property
             builder.Property(f => f.Id).ValueGeneratedOnAdd();
             builder.Property(f => f.Nome).HasColumnType("nvarchar(25)").IsRequired();
+            builder.Property(f => f.IsDeleted).HasColumnType("bool").HasDefaultValue(false);
             builder.HasQueryFilter(f => !f.IsDeleted);
 
             // Index

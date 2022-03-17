@@ -2,12 +2,12 @@
 
 namespace Integracao.Data.Models
 {
-    public class Entity
+    public abstract class Entity
     {
         public Guid Id { get; set; }
-        public bool IsDeleted { get; private set; }
+        public bool IsDeleted { get; private set; } = false;
 
-        public void SoftDelete()
+        public void Desactive() // Soft-delete
             => IsDeleted = true;
 
         public void Active()
