@@ -13,8 +13,10 @@ namespace Integracao.Data.Models
 
         public Pedido(
             int numero,
-            string status, double desconto, 
-            double frete, double subTotal, 
+            string status, 
+            double? desconto, 
+            double? frete, 
+            double subTotal, 
             double valorTotal, 
             Cliente cliente, 
             EnderecoEntrega enderecoEntrega)
@@ -37,8 +39,8 @@ namespace Integracao.Data.Models
         public DateTime DataCriacao { get; private set; }
         public DateTime DataAlteracao { get; private set; }
         public string Status { get; private set; }
-        public double Desconto { get; private set; }
-        public double Frete { get; private set; }
+        public double? Desconto { get; private set; }
+        public double? Frete { get; private set; }
         public double SubTotal { get; private set; }
         public double ValorTotal { get; private set; }
         public Cliente Cliente { get; private set; }
@@ -48,7 +50,6 @@ namespace Integracao.Data.Models
 
         public void AddItem(Item item)
             => _itens.Add(item);
-
         public void AddPagamento(Pagamento pagamento)
             => _pagamentos.Add(pagamento);
         public void UpdateStatus(string status)

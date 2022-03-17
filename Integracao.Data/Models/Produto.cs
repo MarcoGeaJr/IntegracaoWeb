@@ -15,7 +15,7 @@ namespace Integracao.Data.Models
         public string Nome { get; private set; }
         public double Valor { get; private set; }
 
-        public void UpdateNome(string nome)
-            => Nome = nome;
+        public void UpdateValor(double valor)
+            => Valor  = valor;
     }
 }
