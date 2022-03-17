@@ -48,6 +48,7 @@ namespace Integracao.App
 
             #region Services
             services.AddScoped<ISetupService, SetupService>();
+            services.AddScoped<INotificationService, NotificationService>();
             #endregion
 
             #region
